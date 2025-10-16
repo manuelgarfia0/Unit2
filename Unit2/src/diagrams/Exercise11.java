@@ -30,14 +30,14 @@ public class Exercise11 {
 
 		if (grossSalary <= 500) {
 			rates = 0;
-			netSalary = grossSalary;
 		} else if (grossSalary <= 900) {
-			rates = grossSalary * 0.25;
-			netSalary = grossSalary - grossSalary * 0.25;
+			rates = (grossSalary - 500) * 0.25;
 		} else {
-			rates = grossSalary * 0.45;
-			netSalary = grossSalary - grossSalary * 0.45;
+			rates = (grossSalary - 900) * 0.45 + 400 * 0.25;
 		}
+
+		netSalary = grossSalary - rates;
+
 		// Show info
 		System.out.println("Name: " + name + " Rates: " + rates + "Net Salary: " + netSalary);
 
