@@ -22,13 +22,16 @@ public class Exercise03 {
 		// Give value to the discriminating
 		discriminating = Math.pow(b, 2) - 4 * a * c;
 		// Check if the ecuation exist
-		if (discriminating <= 0) {
+		if (discriminating >= 0) {
 			// Calculate the second grade ecuation
-			x1 = ((-b + Math.sqrt(discriminating)) / (2 * a));
-			x2 = ((-b - Math.sqrt(discriminating)) / (2 * a));
+			x1 = (-b + Math.sqrt(discriminating)) / (2 * a);
+			x2 = (-b - Math.sqrt(discriminating)) / (2 * a);
 			// Show answers
 			System.out.println("x1 = " + x1);
 			System.out.println("x2 = " + x2);
+		} else if (a == 0) {
+			x1 = (double) -c / b;
+			System.out.println("The ecuation has one answer. x = " + x1);
 		} else {
 			System.out.println("The answer is not real");
 		}
