@@ -13,7 +13,9 @@ public class Exercise04 {
 		System.out.println("Introduce a number between 0 - 9999: ");
 		num = sc.nextInt();
 		// Check how many digits have the number
-		if (num < 10) {
+		if (num < 0) {
+			System.out.println("Introduce a positive number");
+		} else if (num < 10) {
 			System.out.println("The number has 1 digit");
 		} else if (num < 100) {
 			System.out.println("The number has 2 digits");
