@@ -7,23 +7,27 @@ public class Exercise05 {
 	public static void main(String[] args) {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
+		// Declare constants
+		final String rock = "rock";
+		final String scissors = "scissors";
+		final String paper = "paper";
 		// Declare variables
-		int election1;
-		int election2;
+		String election1;
+		String election2;
 		// Ask data to user
-		System.out.println("Player 1. Introduce 1 (paper), 2 (scissors), 3 (rock): ");
-		election1 = sc.nextInt();
-		System.out.println("Player 2. Introduce 1 (paper), 2 (scissors), 3 (rock): ");
-		election2 = sc.nextInt();
+		System.out.println("Player 1. Introduce paper, rock or scissors: ");
+		election1 = sc.nextLine();
+		System.out.println("Player 2. Introduce paper, rock or scissors: ");
+		election2 = sc.nextLine();
 		// Check results
-		if ((election1 == 1 && election2 == 2) || (election1 == 2 && election2 == 3)
-				|| (election1 == 3 && election2 == 1)) {
+		if ((election1.equalsIgnoreCase(paper) && election2.equalsIgnoreCase(scissors))
+				|| (election1.equalsIgnoreCase(scissors) && election2.equalsIgnoreCase(rock))
+				|| (election1.equalsIgnoreCase(rock) && election2.equalsIgnoreCase(paper))) {
 			System.out.println("Player 2 wins!");
-		} else if ((election2 == 1 && election1 == 2) || (election2 == 2 && election1 == 3)
-				|| (election2 == 3 && election1 == 1)) {
-			System.out.println("Player 1 wins!");
+		} else if (election1.equalsIgnoreCase(election2)) {
+			System.out.println("Draw!");
 		} else {
-			System.out.println("Draw");
+			System.out.println("Player 1 wins!");
 		}
 		// Close scanner
 		sc.close();
