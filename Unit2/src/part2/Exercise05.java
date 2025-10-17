@@ -20,7 +20,11 @@ public class Exercise05 {
 		System.out.println("Player 2. Introduce paper, rock or scissors: ");
 		election2 = sc.nextLine();
 		// Check results
-		if ((election1.equalsIgnoreCase(paper) && election2.equalsIgnoreCase(scissors))
+		if (!election1.equalsIgnoreCase(paper) && !election1.equalsIgnoreCase(scissors)
+				&& !election1.equalsIgnoreCase(rock) && election2.equalsIgnoreCase(paper)
+				&& election2.equalsIgnoreCase(scissors) && election2.equalsIgnoreCase(rock)) {
+			System.out.println("Answer not allowed");
+		} else if ((election1.equalsIgnoreCase(paper) && election2.equalsIgnoreCase(scissors))
 				|| (election1.equalsIgnoreCase(scissors) && election2.equalsIgnoreCase(rock))
 				|| (election1.equalsIgnoreCase(rock) && election2.equalsIgnoreCase(paper))) {
 			System.out.println("Player 2 wins!");
