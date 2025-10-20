@@ -8,7 +8,7 @@ public class Exercise03 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare variables
-		int option;
+		String option;
 		int num1;
 		int num2;
 		// Ask data to user
@@ -18,24 +18,24 @@ public class Exercise03 {
 		System.out.println("Introduce another number: ");
 		num2 = sc.nextInt();
 		// Show options to user
-		System.out.println("1. Addition");
-		System.out.println("2. Subtraction");
-		System.out.println("3. Multiplication");
-		System.out.println("4. Division");
-		option = sc.nextInt();
+		System.out.println("A. Addition");
+		System.out.println("B. Subtraction");
+		System.out.println("C. Multiplication");
+		System.out.println("D. Division");
+		option = sc.nextLine();
 
 		// Create menu
 		switch (option) {
-		case 1 -> {
+		case "A" -> {
 			System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
 		}
-		case 2 -> {
+		case "B" -> {
 			System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
 		}
-		case 3 -> {
+		case "C" -> {
 			System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
 		}
-		case 4 -> {
+		case "D" -> {
 			// Control division to 0
 			if (num1 == 0) {
 				System.out.println("You can't divide to 0");
