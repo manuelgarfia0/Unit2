@@ -13,7 +13,7 @@ public class Exercise04 {
 		int num2 = 0;
 		// Ask user first try
 		System.out.println("¿Cuánto has sacado en la primera tirada?");
-		tirada = sc.nextLine();
+		tirada = sc.nextLine().toUpperCase();
 		// Assign first try to an int variable
 		switch (tirada) {
 		case "UNO" -> {
