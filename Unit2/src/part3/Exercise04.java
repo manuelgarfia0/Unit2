@@ -15,56 +15,58 @@ public class Exercise04 {
 		System.out.println("¿Cuánto has sacado en la primera tirada?");
 		tirada = sc.nextLine().toUpperCase();
 		// Assign first try to an int variable
-		switch (tirada) {
+		num1 = switch (tirada) {
 		case "UNO" -> {
-			num1 = 1;
+			yield 1;
 		}
 		case "DOS" -> {
-			num1 = 2;
+			yield 2;
 		}
 		case "TRES" -> {
-			num1 = 3;
+			yield 3;
 		}
 		case "CUATRO" -> {
-			num1 = 4;
+			yield 4;
 		}
 		case "CINCO" -> {
-			num1 = 5;
+			yield 5;
 		}
 		case "SEIS" -> {
-			num1 = 6;
+			yield 6;
 		}
 		default -> {
 			System.out.println("Opción no valida");
+			yield -1;
 		}
-		}
+		};
 		// Ask user second try
 		System.out.println("¿Cuánto has sacado en la segunda tirada?");
 		tirada = sc.nextLine();
 		// Assign SECOND try to an int variable
-		switch (tirada) {
+		num2 = switch (tirada) {
 		case "UNO" -> {
-			num2 = 1;
+			yield 1;
 		}
 		case "DOS" -> {
-			num2 = 2;
+			yield 2;
 		}
 		case "TRES" -> {
-			num2 = 3;
+			yield 3;
 		}
 		case "CUATRO" -> {
-			num2 = 4;
+			yield 4;
 		}
 		case "CINCO" -> {
-			num2 = 5;
+			yield 5;
 		}
 		case "SEIS" -> {
-			num2 = 6;
+			yield 6;
 		}
 		default -> {
 			System.out.println("Opción no valida");
+			yield -1;
 		}
-		}
+		};
 		// Show the result
 		System.out.println(num1 + num2);
 		// Close scanner
