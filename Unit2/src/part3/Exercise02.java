@@ -38,6 +38,8 @@ public class Exercise02 {
 			System.out.println("The number must be between 1 and 7");
 		}
 		}
+		// Close scanner
+		sc.close();
 	}
 
 }

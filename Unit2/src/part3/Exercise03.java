@@ -9,8 +9,9 @@ public class Exercise03 {
 		Scanner sc = new Scanner(System.in);
 		// Declare variables
 		String option;
-		int num1;
-		int num2;
+		double num1;
+		double num2;
+		double res = 0;
 		// Ask data to user
 		System.out.println("Introduce a number: ");
 		num1 = sc.nextInt();
@@ -22,31 +23,36 @@ public class Exercise03 {
 		System.out.println("B. Subtraction");
 		System.out.println("C. Multiplication");
 		System.out.println("D. Division");
-		option = sc.nextLine();
+		System.out.println("Introduce an option: ");
+		option = sc.nextLine().toUpperCase();
 
 		// Create menu
 		switch (option) {
 		case "A" -> {
-			System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+			res = num1 + num2;
 		}
 		case "B" -> {
-			System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+			res = num1 - num2;
 		}
 		case "C" -> {
-			System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
+			res = num1 * num2;
 		}
 		case "D" -> {
-			// Control division to 0
+			// Control division by 0
 			if (num1 == 0) {
-				System.out.println("You can't divide to 0");
+				System.out.println("You can't divide by 0");
 			} else {
-				System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+				res = num1 / num2;
+				;
 			}
 		}
 		default -> {
 			System.out.println("Invalid option");
 		}
 		}
+		System.out.println(res);
+		// Close scanner
+		sc.close();
 	}
 
 }

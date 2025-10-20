@@ -67,6 +67,8 @@ public class Exercise04 {
 		}
 		// Show the result
 		System.out.println(num1 + num2);
+		// Close scanner
+		sc.close();
 	}
 
 }

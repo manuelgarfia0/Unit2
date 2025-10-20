@@ -33,6 +33,8 @@ public class Exercise01 {
 			System.out.println("You can't get this grade. The number must be between 0 and 10");
 		}
 		}
+		// Close scanner
+		sc.close();
 	}
 
 }
