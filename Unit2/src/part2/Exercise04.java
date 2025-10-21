@@ -8,22 +8,67 @@ public class Exercise04 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare variables
-		int num;
-		// Ask data to user
-		System.out.println("Introduce a number between 0 - 9999: ");
-		num = sc.nextInt();
-		// Check how many digits have the number
-		if (num < 0 || num > 99999) {
-			System.out.println("Number out of range");
-		} else if (num < 10) {
-			System.out.println("The number has 1 digit");
-		} else if (num < 100) {
-			System.out.println("The number has 2 digits");
-		} else if (num < 1000) {
-			System.out.println("The number has 3 digits");
-		} else {
-			System.out.println("The number has 4 digits");
+		String tirada;
+		int num1 = 0;
+		int num2 = 0;
+		// Ask user first try
+		System.out.println("¿Cuánto has sacado en la primera tirada?");
+		tirada = sc.nextLine().toUpperCase();
+		// Assign first try to an int variable
+		num1 = switch (tirada) {
+		case "UNO" -> {
+			yield 1;
 		}
+		case "DOS" -> {
+			yield 2;
+		}
+		case "TRES" -> {
+			yield 3;
+		}
+		case "CUATRO" -> {
+			yield 4;
+		}
+		case "CINCO" -> {
+			yield 5;
+		}
+		case "SEIS" -> {
+			yield 6;
+		}
+		default -> {
+			System.out.println("Opción no valida");
+			yield -1;
+		}
+		};
+		// Ask user second try
+		System.out.println("¿Cuánto has sacado en la segunda tirada?");
+		tirada = sc.nextLine();
+		// Assign SECOND try to an int variable
+		num2 = switch (tirada) {
+		case "UNO" -> {
+			yield 1;
+		}
+		case "DOS" -> {
+			yield 2;
+		}
+		case "TRES" -> {
+			yield 3;
+		}
+		case "CUATRO" -> {
+			yield 4;
+		}
+		case "CINCO" -> {
+			yield 5;
+		}
+		case "SEIS" -> {
+			yield 6;
+		}
+		default -> {
+			System.out.println("Opción no valida");
+			yield -1;
+		}
+		};
+		// Show the result
+		System.out.println(num1 + num2);
 		// Close scanner
 		sc.close();
 	}

@@ -8,15 +8,35 @@ public class Exercise02 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare variables
-		double num;
+		int num;
 		// Ask data to user
-		System.out.println("Introduce a decimal number: ");
-		num = sc.nextDouble();
-		// Check if is between -1 and 1, without counting -1, 1 and 0
-		if (num < 1 && num != 0 && num > -1) {
-			System.out.println(num + " is almost zero.");
-		} else {
-			System.out.println("The number isn't almost zero.");
+		System.out.println("Introduce a number (1-7): ");
+		num = sc.nextInt();
+		switch (num) {
+		case 1 -> {
+			System.out.println("Monday");
+		}
+		case 2 -> {
+			System.out.println("Tuesday");
+		}
+		case 3 -> {
+			System.out.println("Wednesday");
+		}
+		case 4 -> {
+			System.out.println("Thursday");
+		}
+		case 5 -> {
+			System.out.println("Friday");
+		}
+		case 6 -> {
+			System.out.println("Saturday");
+		}
+		case 7 -> {
+			System.out.println("Sunday");
+		}
+		default -> {
+			System.out.println("The number must be between 1 and 7");
+		}
 		}
 		// Close scanner
 		sc.close();

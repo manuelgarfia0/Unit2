@@ -8,15 +8,30 @@ public class Exercise01 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare variables
-		int num;
+		int grade;
 		// Ask data to user
-		System.out.println("Introduce a number: ");
-		num = sc.nextInt();
-		// Indicate if the number is odd or even
-		if (num % 2 == 0) {
-			System.out.println(num + " is an even number.");
-		} else {
-			System.out.println(num + " is an odd number.");
+		System.out.println("Introduce your grade: ");
+		grade = sc.nextInt();
+		// Check the grade
+		switch (grade) {
+		case 0, 1, 2, 3, 4 -> {
+			System.out.println("Insuficiente");
+		}
+		case 5 -> {
+			System.out.println("Suficiente");
+		}
+		case 6 -> {
+			System.out.println("Bien");
+		}
+		case 7, 8 -> {
+			System.out.println("Notable");
+		}
+		case 9, 10 -> {
+			System.out.println("Sobresaliente");
+		}
+		default -> {
+			System.out.println("You can't get this grade. The number must be between 0 and 10");
+		}
 		}
 		// Close scanner
 		sc.close();

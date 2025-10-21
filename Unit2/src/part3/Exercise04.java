@@ -1,76 +1,42 @@
 package part3;
 
+import java.util.Random;
 import java.util.Scanner;
 
+/*
+ * if the answer is correct
+ * num1: 4
+ * num2: 5
+ * Input: 9
+ * Output: Correct
+ * 
+ * if the answer is incorrect
+ * num1: 4
+ * num2: 5
+ * Input: 3
+ * Output: Wrong
+ */
 public class Exercise04 {
 
 	public static void main(String[] args) {
-		// Create scanner
+		// Create scanner and random
 		Scanner sc = new Scanner(System.in);
+		Random rd = new Random();
 		// Declare variables
-		String tirada;
-		int num1 = 0;
-		int num2 = 0;
-		// Ask user first try
-		System.out.println("¿Cuánto has sacado en la primera tirada?");
-		tirada = sc.nextLine().toUpperCase();
-		// Assign first try to an int variable
-		num1 = switch (tirada) {
-		case "UNO" -> {
-			yield 1;
+		int num1 = rd.nextInt(1, 100);
+		int num2 = rd.nextInt(1, 100);
+		int answer;
+		// Show numbers to user and ask him the answer of the addition
+		System.out.println(num1);
+		System.out.println(num2);
+		System.out.println("Introduce the answer of adding those numbers: ");
+		answer = sc.nextInt();
+		// Check if the answer is correct
+		if (answer == num1 + num2) {
+			System.out.println("Correct!");
+		} else {
+			System.out.println("Wrong!");
 		}
-		case "DOS" -> {
-			yield 2;
-		}
-		case "TRES" -> {
-			yield 3;
-		}
-		case "CUATRO" -> {
-			yield 4;
-		}
-		case "CINCO" -> {
-			yield 5;
-		}
-		case "SEIS" -> {
-			yield 6;
-		}
-		default -> {
-			System.out.println("Opción no valida");
-			yield -1;
-		}
-		};
-		// Ask user second try
-		System.out.println("¿Cuánto has sacado en la segunda tirada?");
-		tirada = sc.nextLine();
-		// Assign SECOND try to an int variable
-		num2 = switch (tirada) {
-		case "UNO" -> {
-			yield 1;
-		}
-		case "DOS" -> {
-			yield 2;
-		}
-		case "TRES" -> {
-			yield 3;
-		}
-		case "CUATRO" -> {
-			yield 4;
-		}
-		case "CINCO" -> {
-			yield 5;
-		}
-		case "SEIS" -> {
-			yield 6;
-		}
-		default -> {
-			System.out.println("Opción no valida");
-			yield -1;
-		}
-		};
-		// Show the result
-		System.out.println(num1 + num2);
-		// Close scanner
-		sc.close();
 	}
 
 }

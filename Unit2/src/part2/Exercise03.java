@@ -8,33 +8,49 @@ public class Exercise03 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare variables
-		double x1;
-		double x2;
-		int a;
-		int b;
-		int c;
-		double discriminating;
+		String option;
+		double num1;
+		double num2;
+		double res = 0;
 		// Ask data to user
-		System.out.println("Introduce the value of the coeficients (a, b, c): ");
-		a = sc.nextInt();
-		b = sc.nextInt();
-		c = sc.nextInt();
-		// Give value to the discriminating
-		discriminating = Math.pow(b, 2) - 4 * a * c;
-		// Check if the ecuation exist
-		if (discriminating >= 0) {
-			// Calculate the second grade ecuation
-			x1 = (-b + Math.sqrt(discriminating)) / (2 * a);
-			x2 = (-b - Math.sqrt(discriminating)) / (2 * a);
-			// Show answers
-			System.out.println("x1 = " + x1);
-			System.out.println("x2 = " + x2);
-		} else if (a == 0) {
-			x1 = (double) -c / b;
-			System.out.println("The ecuation has one answer. x = " + x1);
-		} else {
-			System.out.println("The answer is not real");
+		System.out.println("Introduce a number: ");
+		num1 = sc.nextInt();
+
+		System.out.println("Introduce another number: ");
+		num2 = sc.nextInt();
+		// Show options to user
+		System.out.println("A. Addition");
+		System.out.println("B. Subtraction");
+		System.out.println("C. Multiplication");
+		System.out.println("D. Division");
+		System.out.println("Introduce an option: ");
+		option = sc.nextLine().toUpperCase();
+
+		// Create menu
+		switch (option) {
+		case "A" -> {
+			res = num1 + num2;
 		}
+		case "B" -> {
+			res = num1 - num2;
+		}
+		case "C" -> {
+			res = num1 * num2;
+		}
+		case "D" -> {
+			// Control division by 0
+			if (num1 == 0) {
+				System.out.println("You can't divide by 0");
+			} else {
+				res = num1 / num2;
+				;
+			}
+		}
+		default -> {
+			System.out.println("Invalid option");
+		}
+		}
+		System.out.println(res);
 		// Close scanner
 		sc.close();
 	}
