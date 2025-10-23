@@ -102,6 +102,8 @@ public class Exercise03 {
 		} else {
 			System.out.println("Introduce a correct id");
 		}
+		// Close scanner
+		sc.close();
 	}
 
 }

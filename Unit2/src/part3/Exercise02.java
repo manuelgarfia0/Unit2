@@ -27,6 +27,8 @@ public class Exercise02 {
 		num = sc.nextInt();
 		// Check absolute value
 		System.out.println(num >= 0 ? "The absolute value is " + num : "The absolute value is " + num * -1);
+		// Close scanner
+		sc.close();
 	}
 
 }

@@ -25,6 +25,7 @@ public class Exercise04 {
 		// Declare variables
 		int num1 = rd.nextInt(1, 100);
 		int num2 = rd.nextInt(1, 100);
+		int addNum = num1 + num2;
 		int answer;
 		// Show numbers to user and ask him the answer of the addition
 		System.out.println(num1);
@@ -32,11 +33,13 @@ public class Exercise04 {
 		System.out.println("Introduce the answer of adding those numbers: ");
 		answer = sc.nextInt();
 		// Check if the answer is correct
-		if (answer == num1 + num2) {
+		if (answer == addNum) {
 			System.out.println("Correct!");
 		} else {
 			System.out.println("Wrong!");
 		}
+		// Close scanner
+		sc.close();
 	}
 
 }

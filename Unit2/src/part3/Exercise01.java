@@ -55,6 +55,8 @@ public class Exercise01 {
 		} else {
 			System.out.println("The number isn't capicua");
 		}
+		// Close scanner
+		sc.close();
 	}
 
 }
