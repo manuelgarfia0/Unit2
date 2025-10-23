@@ -28,8 +28,12 @@ public class Exercise03 {
 				hour = (hourReversed - maxHour) * -1;
 				System.out.println(hour + " : " + minute);
 			} else if (minuteReversed == 30) {
-				minute = 0;
-				hour = (hourReversed - maxHour) * -1;
+				minute = 30;
+				hour = (hourReversed - maxHour + 1) * -1;
+				System.out.println(hour + " : " + minute);
+			} else if (hourReversed == 12) {
+				hour = 11;
+				minute = (minuteReversed - maxMin) * -1;
 				System.out.println(hour + " : " + minute);
 			} else if (hourReversed > 5 && minuteReversed > 30) {
 				hour = (hourReversed - maxHour) * -1;
