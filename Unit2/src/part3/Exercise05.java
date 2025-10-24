@@ -19,10 +19,10 @@ public class Exercise05 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare constants
-		final double discount = 0.30;
-		final double priceKM = 2.5;
-		final int maxDistance = 800;
-		final int maxDays = 7;
+		final double DISCOUNT = 0.30;
+		final double PRICE_KM = 2.5;
+		final int MAX_DISTANCE = 800;
+		final int MAX_DAYS = 7;
 		// Declare variables
 		int distance;
 		int numDays;
@@ -33,10 +33,10 @@ public class Exercise05 {
 		distance = sc.nextInt();
 		numDays = sc.nextInt();
 		// Calculate the price
-		price = (priceKM * distance);
+		price = (PRICE_KM * distance);
 		// Calculate the final price if have discount
-		if (numDays > maxDays && distance > maxDistance) {
-			finalPrice = price - price * discount;
+		if (numDays > MAX_DAYS && distance > MAX_DISTANCE) {
+			finalPrice = price - price * DISCOUNT;
 		} else {
 			finalPrice = price;
 		}

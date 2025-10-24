@@ -8,9 +8,9 @@ public class Exercise02 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare constants
-		final double interestAC = 1.5;
-		final double interestB = 2;
-		final double interestX = 5;
+		final double INTEREST_AC = 1.5;
+		final double INTEREST_B = 2;
+		final double INTEREST_X = 5;
 		// Declare variables
 		double money;
 		String bank;
@@ -27,13 +27,13 @@ public class Exercise02 {
 		// Check money with the type of bank
 		switch (bank) {
 		case "A", "C" -> {
-			money = money * interestAC;
+			money = money * INTEREST_AC;
 		}
 		case "B" -> {
-			money = money * interestB;
+			money = money * INTEREST_B;
 		}
 		case "X" -> {
-			money = money * interestX;
+			money = money * INTEREST_X;
 		}
 		default -> {
 			System.out.println("Not a type of bank");

@@ -8,8 +8,8 @@ public class Exercise03 {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
 		// Declare constants
-		final int maxHour = 12;
-		final int maxMin = 60;
+		final int MAX_HOUR = 12;
+		final int MAX_MIN = 60;
 		// Declare variables
 		int hourReversed;
 		int minuteReversed;
@@ -19,34 +19,38 @@ public class Exercise03 {
 		System.out.println("Introduce the hours and minutes");
 		hourReversed = sc.nextInt();
 		minuteReversed = sc.nextInt();
-		// Check the limits
-		if ((hourReversed < 1 || hourReversed > 12) && minuteReversed < 0 || minuteReversed > 59) {
-			System.out.println("That hour doesn't exist.");
-		} else {
-			if (minuteReversed == 0) {
+		// Check limits
+		if (hourReversed > 12 || hourReversed < 1 && minuteReversed > 59 || minuteReversed < 0) {
+			System.out.println("Hour or minute out of limits");
+		}
+		// Calculate minutes and hours
+		if (minuteReversed == 0) {
+			if (hourReversed == 12) {
+				hour = 12;
 				minute = 0;
-				hour = (hourReversed - maxHour) * -1;
-				System.out.println(hour + " : " + minute);
-			} else if (minuteReversed == 30) {
-				minute = 30;
-				hour = (hourReversed - maxHour + 1) * -1;
-				System.out.println(hour + " : " + minute);
-			} else if (hourReversed == 12) {
-				hour = 11;
-				minute = (minuteReversed - maxMin) * -1;
-				System.out.println(hour + " : " + minute);
-			} else if (hourReversed > 5 && minuteReversed > 30) {
-				hour = (hourReversed - maxHour) * -1;
-				minute = (minuteReversed - maxMin) * -1;
-				System.out.println(hour + " : " + minute);
-
 			} else {
-				hour = (hourReversed - maxHour + 1) * -1;
-				minute = (minuteReversed - maxMin) * -1;
-				System.out.println(hour + " : " + minute);
+				minute = 0;
+				hour = MAX_HOUR - hourReversed;
+			}
+		} else {
+			if (hourReversed == 12) {
+				hour = 11;
+				minute = MAX_MIN - minuteReversed;
+			} else {
+				minute = MAX_MIN - minuteReversed;
+				hour = (MAX_HOUR - 1) - hourReversed;
 			}
 
 		}
+		// Show correct hour and minutes
+		if (hour < 10) {
+			System.out.print("0");
+		}
+		System.out.print(hour + " : ");
+		if (minute < 10) {
+			System.out.print("0");
+		}
+		System.out.print(minute);
 		// Close scanner
 		sc.close();
 
