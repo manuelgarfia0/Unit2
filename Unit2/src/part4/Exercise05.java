@@ -9,7 +9,7 @@ public class Exercise05 {
 		Scanner sc = new Scanner(System.in);
 		// Declare variables
 		int age;
-		double add = 0;
+		int add = 0;
 		int count = 0;
 		int ageOver = 0;
 		double mean;
@@ -28,7 +28,7 @@ public class Exercise05 {
 			age = sc.nextInt();
 		}
 		// Calculate mean
-		mean = add / count;
+		mean = (double) add / count;
 		// Show results
 		System.out.println("The mean of age is: " + mean);
 		System.out.println("The addition of all ages is " + add);

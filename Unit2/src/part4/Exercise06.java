@@ -22,8 +22,14 @@ public class Exercise06 {
 			System.out.println("Introduce the height of another tree: ");
 			height = sc.nextInt();
 		}
-		// Show the higher tree
-		System.out.println("The higher tree is " + higherTree + " cm");
+		// Show if the height is valid
+		if (higherTree != -1) {
+			// Show the higher tree
+			System.out.println("The higher tree is " + higherTree + " cm");
+		} else {
+			System.out.println("Invalid height");
+		}
+
 		// Close scanner
 		sc.close();
 	}
