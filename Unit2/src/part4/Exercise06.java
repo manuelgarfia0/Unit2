@@ -24,6 +24,8 @@ public class Exercise06 {
 		}
 		// Show the higher tree
 		System.out.println("The higher tree is " + higherTree + " cm");
+		// Close scanner
+		sc.close();
 	}
 
 }

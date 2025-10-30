@@ -34,6 +34,8 @@ public class Exercise05 {
 		System.out.println("The addition of all ages is " + add);
 		System.out.println("The number of students is " + count);
 		System.out.println("The number of students over 18 is " + ageOver);
+		// Close scanner
+		sc.close();
 	}
 
 }

@@ -45,6 +45,8 @@ public class Exercise04 {
 		System.out.println("The addition of positive numbers is: " + add);
 		System.out.println("The mean of the negative numbers is: " + meanNeg);
 		System.out.println("There are " + countZero + " zeros");
+		// Close scanner
+		sc.close();
 	}
 
 }
