@@ -21,6 +21,8 @@ public class Exercise03 {
 			System.out.print(num + " + ");
 		} while (num < userNum);
 		System.out.println(" = " + add);
+		// Close scanner
+		sc.close();
 	}
 
 }

@@ -20,7 +20,8 @@ public class Exercise04 {
 			answer = num * numMult;
 			System.out.println(num + " * " + numMult + " = " + answer);
 		} while (answer < (num * 10));
-
+		// Close scanner
+		sc.close();
 	}
 
 }
