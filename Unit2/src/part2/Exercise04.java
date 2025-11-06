@@ -41,7 +41,7 @@ public class Exercise04 {
 		};
 		// Ask user second try
 		System.out.println("¿Cuánto has sacado en la segunda tirada?");
-		tirada = sc.nextLine();
+		tirada = sc.nextLine().toUpperCase();
 		// Assign SECOND try to an int variable
 		num2 = switch (tirada) {
 		case "UNO" -> {
