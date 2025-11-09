@@ -14,7 +14,10 @@ public class Exercise02 {
 		num = sc.nextInt();
 		//
 		for (int i = 1; i <= num; i++) {
-			System.out.println(i);
+			if (i % 3 == 0) {
+				System.out.println(i);
+			}
+
 		}
 		// Close scanner
 		sc.close();
