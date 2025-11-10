@@ -2,27 +2,24 @@ package part6;
 
 import java.util.Scanner;
 
-public class Exercise02 {
+public class Exercise07 {
 
 	public static void main(String[] args) {
 		// Create scanner
 		Scanner sc = new Scanner(System.in);
-		// Declare variables
+		// Declare variable
 		int num;
-		int contMult = 0;
+		boolean prime = true;
 		// Ask number to user
 		System.out.println("Introduce a number: ");
 		num = sc.nextInt();
-		// Count numbers multiples of three
-		for (int i = 1; i <= num; i++) {
-			if (i % 3 == 0) {
-				contMult++;
+		// If the number
+		for (int i = 2; i < num; i++) {
+			if (num % i == 0) {
+				prime = false;
 			}
 		}
-		// Show result
-		System.out.println(contMult);
-		// Close scanner
-		sc.close();
+		System.out.println(prime);
 	}
 
 }
