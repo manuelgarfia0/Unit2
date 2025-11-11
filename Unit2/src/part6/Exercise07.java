@@ -13,13 +13,19 @@ public class Exercise07 {
 		// Ask number to user
 		System.out.println("Introduce a number: ");
 		num = sc.nextInt();
-		// If the number
-		for (int i = 2; i < num; i++) {
-			if (num % i == 0) {
-				prime = false;
+		if (num == 1) {
+			prime = false;
+		} else {
+			// If the number
+			for (int i = 2; i < num; i++) {
+				if (num % i == 0) {
+					prime = false;
+				}
 			}
 		}
 		System.out.println(prime);
+		// Close scanner
+		sc.close();
 	}
 
 }
