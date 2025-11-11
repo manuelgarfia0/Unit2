@@ -16,7 +16,10 @@ public class Exercise05 {
 		// Multiply the number introduced to factorial, decrement the number and
 		// multiply until the number is 1
 		for (int i = num; i >= 1; i--) {
-			System.out.print(num + " * ");
+			System.out.print(num);
+			if (i != 1) {
+				System.out.print(" * ");
+			}
 			factorial *= num;
 			num--;
 		}
