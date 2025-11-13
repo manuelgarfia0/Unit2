@@ -17,9 +17,9 @@ public class Exercise08 {
 		numA = sc.nextInt();
 		System.out.println("Introduce another number: ");
 		numB = sc.nextInt();
-		// If numB is higher than numA show numbers from numA to numB
+		// Initialize the variable to the lower number
 		lower = Math.min(numA, numB);
-		// If numA is higher than numB show numbers from numB to numA
+		// Initialize the variable to the higher number
 		higher = Math.max(numA, numB);
 		// Show numbers from lower number to higher
 		for (int i = lower; i <= higher; i++) {
