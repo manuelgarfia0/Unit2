@@ -10,6 +10,8 @@ public class Exercise08 {
 		// Declare variables
 		int numA;
 		int numB;
+		int lower;
+		int higher;
 		// Ask numbers to user
 		System.out.println("Introduce a number: ");
 		numA = sc.nextInt();
@@ -18,14 +20,16 @@ public class Exercise08 {
 		// See the numbers between A and B
 		// If numB is higher than numA show numbers from numA to numB
 		if (numA < numB) {
-			for (int i = numA; i <= numB; i++) {
-				System.out.println(i);
-			}
+			lower = numA;
+			higher = numB;
 			// If numA is higher than numB show numbers from numB to numA
 		} else {
-			for (int i = numA; i >= numB; i--) {
-				System.out.println(i);
-			}
+			higher = numA;
+			lower = numB;
+		}
+		// Show numbers from lower number to higher
+		for (int i = lower; i <= higher; i++) {
+			System.out.println(i);
 		}
 		// Close scanner
 		sc.close();
