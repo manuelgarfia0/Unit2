@@ -17,7 +17,6 @@ public class Exercise08 {
 		numA = sc.nextInt();
 		System.out.println("Introduce another number: ");
 		numB = sc.nextInt();
-		// See the numbers between A and B
 		// If numB is higher than numA show numbers from numA to numB
 		lower = Math.min(numA, numB);
 		// If numA is higher than numB show numbers from numB to numA
