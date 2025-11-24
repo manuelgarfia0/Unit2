@@ -12,10 +12,10 @@ public class Exercise05 {
 		// Ask number to user
 		System.out.println("Introduce a number between 1-20: ");
 		num = sc.nextInt();
-		if (num > 0 || num < 20) {
+		if (num > 0 && num < 20) {
 			for (int i = 1; i <= num; i++) {
 				// Repetir el número i tantas veces como su valor
-				for (int j = 0; j < i; j++) {
+				for (int j = 1; j <= i; j++) {
 					System.out.print(i);
 				}
 				System.out.println();

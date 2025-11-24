@@ -12,11 +12,12 @@ public class Exercise06 {
 		// Ask user a number
 		System.out.println("Introduce a number: ");
 		num = sc.nextInt();
+		// Loop to build the pyramid
 		for (int i = 1; i <= num; i++) {
 			for (int k = num - 1; k >= i; k--) {
 				System.out.print(" ");
 			}
-			for (int j = 0; j < i; j++) {
+			for (int j = 1; j <= i; j++) {
 				System.out.print("* ");
 			}
 			System.out.println();
