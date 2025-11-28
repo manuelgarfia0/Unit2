@@ -8,39 +8,34 @@ public class Ejercicio04 {
 		// Crear el escaner
 		Scanner sc = new Scanner(System.in);
 		// Declarar las variables
-		int num;
-		// Ask a positive number to the user
+		int lado;
+		// Preguntar al usuario los lados del hexagono
 		do {
 			System.out.println("Introduce un número positivo: ");
-			num = sc.nextInt();
-		} while (num < 1);
+			lado = sc.nextInt();
+		} while (lado < 1);
 		// Bucles para dibujar la parte superior del hexágono
-		for (int i = 0; i < num; i++) {
-			for (int j = num - 1; j > i; j--) {
+		for (int i = 0; i < lado; i++) {
+			for (int j = lado - 1; j > i; j--) {
 				System.out.print(" ");
 			}
-			for (int k = 0; k < num + i; k++) {
-				System.out.print("*");
-			}
-			for (int l = 0; l < i; l++) {
+			for (int k = 0; k < lado + i * 2; k++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
 		// Bucles para dibujar la parte inferior del hexágono
-		for (int i = 0; i < num - 1; i++) {
+		for (int i = 0; i < lado - 1; i++) {
 			for (int j = 0; j <= i; j++) {
 				System.out.print(" ");
 			}
-			for (int k = 0; k < num + (num - 2 - i); k++) {
-				System.out.print("*");
-			}
-			for (int l = 0; l < (num - 2 - i); l++) {
+			for (int k = 0; k < lado * 2 + 2 - i * 2; k++) {
 				System.out.print("*");
 			}
 			System.out.println();
 		}
 		// Cerrar escaner
 		sc.close();
+
 	}
 }
